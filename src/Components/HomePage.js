@@ -1,13 +1,22 @@
 import {getParks} from '../apiCalls'
+import {useEffect} from 'react'
 
 function HomePage(){
 
-    const parkData = await getParks();
+    async function gatherInfo(){
+        const parkData = await getParks();
 
-    console.log(parkData)
+        console.log("PARK DATA",parkData)
+    }
+    
+    useEffect(() => {
+        gatherInfo();
+    },[])
 
 
     return (
         <></>
     )
 }
+
+export default HomePage
