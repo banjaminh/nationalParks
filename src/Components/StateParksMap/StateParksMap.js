@@ -15,8 +15,8 @@ function StateParksMap() {
         return <Marker key={park.id} id={park.id} position={[park.latitude, park.longitude]} >
             <Popup>
                 <div className='park-popup'>
-                    <p>{park.name}</p>
-                    {park.images[0].url &&<img src={park.images[0].url} alt={park.images[0].altText}/>}
+                    <p>{park.fullName}</p>
+                    {park.images[0] && <img src={park.images[0].url} alt={park.images[0].altText}/>}
                 </div>
             </Popup>
         </Marker> })

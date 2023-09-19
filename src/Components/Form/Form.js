@@ -24,7 +24,13 @@ function Form(){
     async function gatherParkData(stateID){
         
             const parkData = await getParks(stateID);
-            setParksData(parkData.data)
+            console.log("PARK DATA",parkData)
+            const filteredParks = parkData.data.filter(park => {
+                let validPark = park.latitude && park.longitude ? true: false;
+                return validPark;
+            })
+            console.log(filteredParks)
+            setParksData(filteredParks)
             navigate(`/${stateID}`)
         }
     

@@ -4,5 +4,13 @@
 }
 
 .leaflet-popup-content-wrapper {
-    background-color: rgb(104, 183, 106)
-  }
+    background-color: rgb(104, 183, 106);
+
+}
+
+.park-popup{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
