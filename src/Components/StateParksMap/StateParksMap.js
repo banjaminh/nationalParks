@@ -16,7 +16,7 @@ function StateParksMap() {
             <Popup>
                 <div className='park-popup'>
                     <p>{park.name}</p>
-                    <img src={park.images[0].url} alt={park.images[0].altText}/>
+                    {park.images[0].url &&<img src={park.images[0].url} alt={park.images[0].altText}/>}
                 </div>
             </Popup>
         </Marker> })
