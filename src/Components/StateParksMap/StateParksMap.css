@@ -1,0 +1,8 @@
+.park-popup img{
+    width: 300px;
+    height: 150px;
+}
+
+.leaflet-popup-content-wrapper {
+    background-color: rgb(104, 183, 106)
+  }
