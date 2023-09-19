@@ -1,9 +1,11 @@
+import { useParksContext } from '../../Context/ParksContext';
 import './Form.css'
 import {useState} from 'react'
+import {getParks} from '../../apiCalls'
 
-function Form({state, setState, gatherParkData}){
-    
-
+function Form(){
+    const [state, setState] = useState('');
+    const {parksData , setParksData} = useParksContext();
 
     const stateAbbreviations = [
         'AK', 'AL', 'AR', 'AZ','CA', 'CO', 'CT', 'DC', 'DE',  'FL',   'GA',   'HI',   'IA',   'ID',   'IL',   'IN',   'KS',   'KY',   'LA',   'MA', 
@@ -17,7 +19,12 @@ function Form({state, setState, gatherParkData}){
             );
           });
           
-    console.log("STATE ABBREV" ,stateAbbreviations.length)
+    async function gatherParkData(stateID){
+        
+            const parkData = await getParks(stateID);
+            setParksData(parkData.data)
+        }
+    
 
 
     return (
@@ -27,8 +34,8 @@ function Form({state, setState, gatherParkData}){
             name='state'
             className='dropdown'
             value={state}
-            onChange={e => {
-                setState(e.target.value)
+            onChange={(e) => {
+                setState(e.target.value);
                 gatherParkData(e.target.value)
             }}
             >
