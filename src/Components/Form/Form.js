@@ -2,10 +2,12 @@ import { useParksContext } from '../../Context/ParksContext';
 import './Form.css'
 import {useState} from 'react'
 import {getParks} from '../../apiCalls'
+import { useNavigate } from 'react-router-dom';
 
 function Form(){
     const [state, setState] = useState('');
     const {parksData , setParksData} = useParksContext();
+    const navigate = useNavigate();
 
     const stateAbbreviations = [
         'AK', 'AL', 'AR', 'AZ','CA', 'CO', 'CT', 'DC', 'DE',  'FL',   'GA',   'HI',   'IA',   'ID',   'IL',   'IN',   'KS',   'KY',   'LA',   'MA', 
@@ -22,7 +24,14 @@ function Form(){
     async function gatherParkData(stateID){
         
             const parkData = await getParks(stateID);
-            setParksData(parkData.data)
+            console.log("PARK DATA",parkData)
+            const filteredParks = parkData.data.filter(park => {
+                let validPark = park.latitude && park.longitude ? true: false;
+                return validPark;
+            })
+            console.log(filteredParks)
+            setParksData(filteredParks)
+            navigate(`/${stateID}`)
         }
     
 
