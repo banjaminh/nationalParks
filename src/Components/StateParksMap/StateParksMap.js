@@ -3,16 +3,45 @@ import L from 'leaflet';
 import './StateParksMap.css'
 import { useParksContext } from '../../Context/ParksContext';
 import {useEffect,useState} from 'react'
+import {Icon} from 'leaflet'
+import {useParams} from 'react-router-dom'
+import { getParks } from '../../apiCalls';
 
+const parkIcon = new Icon({
+  iconUrl: require('./blackparkIcon.png'),
+  iconSize: [40,40]
 
+})
 
 function StateParksMap() {
     const map = useMap();
     const {parksData} = useParksContext();
+    const [stateData, setStateData] = useState([]);
 
-    console.log("PARKS DATA",parksData)
-    const mapPoints = parksData.map(park => {
-        return <Marker key={park.id} id={park.id} position={[park.latitude, park.longitude]} >
+    const stateIDParams = useParams().id
+    
+    useEffect(() => {
+        async function gatherParkData(){
+            try{
+            const stateParkData = await getParks(stateIDParams);
+            console.log("StateParkData", stateParkData)
+            
+            setStateData(stateParkData.data)
+            }
+            catch(error){
+                console.error('Error fetching park data:', error)
+            }
+        }
+    gatherParkData();
+    },[stateIDParams])
+
+   
+  
+      
+
+
+    const mapPoints = stateData.map(park => {
+        return <Marker key={park.id} id={park.id} position={[park.latitude, park.longitude]} icon={parkIcon} >
             <Popup>
                 <div className='park-popup'>
                     <p>{park.fullName}</p>
@@ -23,12 +52,15 @@ function StateParksMap() {
     
 
     useEffect(() => {
-      const distanceObject = calculateFurthestDistance(parksData);
+      if(stateData.length > 0){
+      const distanceObject = calculateFurthestDistance(stateData);
+      console.log("DISTANCE OBJECT",distanceObject)
       let cornerA = L.latLng(distanceObject.corner1);
       let cornerB = L.latLng(distanceObject.corner2);
       let bounds = L.latLngBounds(cornerA, cornerB);
       map.flyToBounds(bounds)
-    },[mapPoints])
+      }
+    },[stateData, map])
     
 
     function calculateDistance(lat1, long1, lat2, long2) {

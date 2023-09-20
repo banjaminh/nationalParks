@@ -2,16 +2,32 @@ import {getParks} from '../apiCalls'
 import {useEffect, useState} from 'react'
 import './HomePage.css'
 import Form from './Form/Form'
+import ToVisit from '../Components/ToVisit.js/ToVisit'
+import { useParksContext } from '../Context/ParksContext'
 
 
 function HomePage(){
+    const {setParksData, parksData} = useParksContext()
+
+    
+    
+    useEffect(() => {
+        async function gatherParkData(){
+            try{
+            const parkData = await getParks();
+            
+            
+            setParksData(parkData.data)
+            }
+            catch(error){
+                console.error('Error fetching park data:', error)
+            }
+        }
+    gatherParkData();
+    },[setParksData])
     
 
-    // async function gatherParkData(state){
-    //     const parkData = await getParks(state);
-    //     setParkData(parkData.data)
-    // }
-    
+    console.log("PARKS DATA HOMEPAGE", parksData)
 
 
    
@@ -19,6 +35,7 @@ function HomePage(){
 
     return (
         <div className='overlay'>
+            <ToVisit/>
             <Form />
         </div>
     )

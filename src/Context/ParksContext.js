@@ -11,6 +11,7 @@ export const ParkContext = createContext(null);
 
 export function ParksContextProvider({children}){
     const [parksData,setParksData] = useState(null)
+    
 
     const value = {
         parksData :parksData,

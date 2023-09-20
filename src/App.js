@@ -5,6 +5,7 @@ import Header from './Components/Header/Header'
 import { ParksContextProvider } from './Context/ParksContext';
 import {Routes, Route} from 'react-router-dom'
 import StatePage from './Components/StatePage/StatePage'
+import { FavoritesContextProvider } from './Context/FavoritesContext';
 
 
 function App() {
@@ -14,17 +15,20 @@ function App() {
   
   return (
     <ParksContextProvider>
-      <div className="App">
-        <Header />
-        <Routes>
-          <Route path='/' element= {<HomePage/>}>
-            
-          </Route>
-          <Route path='/:id' element={<StatePage/>}/>
+      <FavoritesContextProvider>
+        <div className="App">
+          <Header />
+          <Routes>
+            <Route path='/' element= {<HomePage/>}>
+              
+            </Route>
+            <Route path='/states/:id' element={<StatePage/>}/>
 
-        </Routes>
-      </div>
+          </Routes>
+        </div>
+      </FavoritesContextProvider>
     </ParksContextProvider>
+
   );
 }
 
