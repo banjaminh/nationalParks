@@ -6,14 +6,9 @@ import L from 'leaflet';
 import './StatePage.css'
 import StateParksMap from '../StateParksMap/StateParksMap'
 
-// const parkIcon = new Icon({
-//     iconUrl: 'public/parkIcon.svg',
-//     iconSize: [25,25]
 
-// })
 
 function StatePage(){
-    console.log(useParams())
     console.log("STATEPAGE")
     return (
         <div className='map' id='map'>

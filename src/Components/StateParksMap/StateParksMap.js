@@ -15,24 +15,27 @@ const parkIcon = new Icon({
 
 function StateParksMap() {
     const map = useMap();
-    const {parksData} = useParksContext();
-    const [stateData, setStateData] = useState([]);
+    const {parksData,stateParkData,setStateParkData} = useParksContext();
+    
 
     const stateIDParams = useParams().id
     
     useEffect(() => {
+        if(stateParkData.length === 0){
+          console.log("STATEPARK TEST")
         async function gatherParkData(){
             try{
             const stateParkData = await getParks(stateIDParams);
             console.log("StateParkData", stateParkData)
             
-            setStateData(stateParkData.data)
+            setStateParkData(stateParkData.data)
             }
             catch(error){
                 console.error('Error fetching park data:', error)
             }
         }
-    gatherParkData();
+      
+    gatherParkData();}
     },[stateIDParams])
 
    
@@ -40,7 +43,7 @@ function StateParksMap() {
       
 
 
-    const mapPoints = stateData.map(park => {
+    const mapPoints = stateParkData && stateParkData.map(park => {
         return <Marker key={park.id} id={park.id} position={[park.latitude, park.longitude]} icon={parkIcon} >
             <Popup>
               <Link to={`/states/${stateIDParams}/park/${park.id}`}>
@@ -54,15 +57,19 @@ function StateParksMap() {
     
 
     useEffect(() => {
-      if(stateData.length > 0){
-      const distanceObject = calculateFurthestDistance(stateData);
+      console.log("stateParkData LENGTH:",stateParkData.length)
+      if(stateParkData.length >= 2){
+      const distanceObject = calculateFurthestDistance(stateParkData);
       console.log("DISTANCE OBJECT",distanceObject)
       let cornerA = L.latLng(distanceObject.corner1);
       let cornerB = L.latLng(distanceObject.corner2);
       let bounds = L.latLngBounds(cornerA, cornerB);
-      map.flyToBounds(bounds)
+      map.flyToBounds(bounds, {duration: .25})
       }
-    },[stateData, map])
+      else if(stateParkData.length === 1){
+        map.flyTo([stateParkData[0].latitude,stateParkData[0].longitude],14)
+      }
+    },[stateParkData, map])
     
 
     function calculateDistance(lat1, long1, lat2, long2) {
@@ -102,20 +109,7 @@ function StateParksMap() {
         return largestDistance;
       }
     
-    function calculateCenter(filteredBreweries) {
-        let longSum = 0;
-        let latSum = 0;
-        filteredBreweries.forEach(brewery => {
-          latSum += Number(brewery.latitude);
-          longSum += Number(brewery.longitude);
-        });
     
-        let mapCenter = {
-          latCenter: latSum / filteredBreweries.length,
-          longCenter: longSum / filteredBreweries.length,
-        };
-        return mapCenter;
-    }
 
 
 

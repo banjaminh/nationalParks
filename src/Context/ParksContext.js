@@ -10,12 +10,15 @@ import {
 export const ParkContext = createContext(null);
 
 export function ParksContextProvider({children}){
-    const [parksData,setParksData] = useState(null)
+    const [parksData,setParksData] = useState(null);
+    const [stateParkData,setStateParkData] = useState([]);
     
 
     const value = {
         parksData :parksData,
         setParksData : setParksData,
+        stateParkData: stateParkData,
+        setStateParkData: setStateParkData,
     }
 
     return (

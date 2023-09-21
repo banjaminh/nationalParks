@@ -32,13 +32,11 @@ function App() {
             <Route path='/' element= {<HomePage/>}/>
               
             <Route path="/states/:id" element={<StatePageLayout />}>
-  <Route index element={<StatePage />} /> {/* Matches the base URL: /states/:id */}
-  <Route path="park/:parkID" element={<ParkPageLayout />}>
-    <Route index element={<ParkPage />} /> {/* Matches /states/:id/park/:parkID */}
-  </Route>
-</Route>
-            {/* <Route path='/states/:id' element={<StatePage/>}></Route>
-            <Route path='park/:parkID' element={<ParkPage/>}></Route> */}
+              <Route index element={<StatePage />} /> 
+              <Route path="park/:parkID" element={<ParkPage />}/>
+            </Route>
+                
+           
 
           </Routes>
           </div>
