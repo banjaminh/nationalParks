@@ -14,12 +14,12 @@ function ImageView({imageArray}){
         setIndex(nextIndex);
     }
 
-    return (
+    return imageArray.length != 0 ? (
         <div className='image-container'>
             <img src={imageArray[index].url} onClick={changeImage}></img>
             <button onClick={changeImage}>Next</button>
-        </div>
-    )
+        </div>) : null
+    
     }
 
     export default ImageView;

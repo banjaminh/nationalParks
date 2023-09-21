@@ -14,7 +14,16 @@ export function FavoritesContextProvider({children}){
 
     const value = {
         favorites: favorites,
-        setFavorites: setFavorites,
+        toggleFavorites: park => {
+            const isFavorite = favorites.some((fav)=> fav.id === park.id);
+            if(isFavorite){
+                const updatedList = favorites.filter(favs => favs.id !== park.id)
+                setFavorites(updatedList)
+            }
+            else{
+                setFavorites([...favorites, park])
+            }
+        }   
     }
 
     return (
@@ -25,7 +34,7 @@ export function FavoritesContextProvider({children}){
 
 
 
-export function useParksContext(){
+export function useFavoritesContext(){
     const favoritesData = useContext(FavoritesContext)
 
     return favoritesData;
