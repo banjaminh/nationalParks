@@ -6,7 +6,10 @@ import { ParksContextProvider } from './Context/ParksContext';
 import {Routes, Route} from 'react-router-dom'
 import StatePage from './Components/StatePage/StatePage'
 import { FavoritesContextProvider } from './Context/FavoritesContext';
-
+import ToVisit from './Components/ToVisit.js/ToVisit'
+import ParkPage from './Components/ParkPage/ParkPage'
+import StatePageLayout from './Components/Layout/StatePageLayout';
+import ParkPageLayout from './Components/Layout/ParkPageLayout';
 
 function App() {
   
@@ -18,16 +21,39 @@ function App() {
       <FavoritesContextProvider>
         <div className="App">
           <Header />
+          <div className='main-wrap'>
+
+          <div className='routes'>
+
           <Routes>
-            <Route path='/' element= {<HomePage/>}>
+            
+
+            
+            <Route path='/' element= {<HomePage/>}/>
               
-            </Route>
-            <Route path='/states/:id' element={<StatePage/>}/>
+            <Route path="/states/:id" element={<StatePageLayout />}>
+  <Route index element={<StatePage />} /> {/* Matches the base URL: /states/:id */}
+  <Route path="park/:parkID" element={<ParkPageLayout />}>
+    <Route index element={<ParkPage />} /> {/* Matches /states/:id/park/:parkID */}
+  </Route>
+</Route>
+            {/* <Route path='/states/:id' element={<StatePage/>}></Route>
+            <Route path='park/:parkID' element={<ParkPage/>}></Route> */}
 
           </Routes>
+          </div>
+          <div className='to-visit'>
+            <ToVisit />
+          </div>
+          </div>
+          
+          
         </div>
       </FavoritesContextProvider>
     </ParksContextProvider>
+    
+
+          
 
   );
 }

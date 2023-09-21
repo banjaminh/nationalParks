@@ -4,12 +4,12 @@ import './HomePage.css'
 import Form from './Form/Form'
 import ToVisit from '../Components/ToVisit.js/ToVisit'
 import { useParksContext } from '../Context/ParksContext'
+import React from 'react'
 
 
 function HomePage(){
     const {setParksData, parksData} = useParksContext()
 
-    
     
     useEffect(() => {
         async function gatherParkData(){
@@ -35,7 +35,6 @@ function HomePage(){
 
     return (
         <div className='overlay'>
-            <ToVisit/>
             <Form />
         </div>
     )

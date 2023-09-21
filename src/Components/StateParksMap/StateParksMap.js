@@ -4,7 +4,7 @@ import './StateParksMap.css'
 import { useParksContext } from '../../Context/ParksContext';
 import {useEffect,useState} from 'react'
 import {Icon} from 'leaflet'
-import {useParams} from 'react-router-dom'
+import {useParams, Link} from 'react-router-dom'
 import { getParks } from '../../apiCalls';
 
 const parkIcon = new Icon({
@@ -43,10 +43,12 @@ function StateParksMap() {
     const mapPoints = stateData.map(park => {
         return <Marker key={park.id} id={park.id} position={[park.latitude, park.longitude]} icon={parkIcon} >
             <Popup>
+              <Link to={`/states/${stateIDParams}/park/${park.id}`}>
                 <div className='park-popup'>
                     <p>{park.fullName}</p>
                     {park.images[0] && <img src={park.images[0].url} alt={park.images[0].altText}/>}
                 </div>
+              </Link>
             </Popup>
         </Marker> })
     
