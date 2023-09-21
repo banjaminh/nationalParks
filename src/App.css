@@ -2,3 +2,22 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.App{
+  display:flex;
+  flex-direction: column;
+}
+
+.main-wrap{
+  display: flex;
+}
+
+.routes{
+  width: 80vw;
+}
+
+.to-visit{
+  background-color: blueviolet;
+  width: 20%;
+  height:85vh;
+}

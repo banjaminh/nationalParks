@@ -1,14 +1,15 @@
 import {useEffect,useState} from 'react';
-import {useNavigate} from 'react-router-dom'
+import {useNavigate,useParams} from 'react-router-dom'
 import { useParksContext } from '../../Context/ParksContext';
 import { MapContainer, TileLayer, Marker, Popup, Pane, useMap, Map } from 'react-leaflet';
 import L from 'leaflet';
 import './StatePage.css'
 import StateParksMap from '../StateParksMap/StateParksMap'
 
+
+
 function StatePage(){
-    const {parksData} = useParksContext();
-    console.log(parksData)
+    console.log("STATEPAGE")
     return (
         <div className='map' id='map'>
             <MapContainer

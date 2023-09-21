@@ -3,32 +3,73 @@ import L from 'leaflet';
 import './StateParksMap.css'
 import { useParksContext } from '../../Context/ParksContext';
 import {useEffect,useState} from 'react'
+import {Icon} from 'leaflet'
+import {useParams, Link} from 'react-router-dom'
+import { getParks } from '../../apiCalls';
 
+const parkIcon = new Icon({
+  iconUrl: require('./blackparkIcon.png'),
+  iconSize: [40,40]
 
+})
 
 function StateParksMap() {
     const map = useMap();
-    const {parksData} = useParksContext();
+    const {parksData,stateParkData,setStateParkData} = useParksContext();
+    
 
-    console.log("PARKS DATA",parksData)
-    const mapPoints = parksData.map(park => {
-        return <Marker key={park.id} id={park.id} position={[park.latitude, park.longitude]} >
+    const stateIDParams = useParams().id
+    
+    useEffect(() => {
+        if(stateParkData.length === 0){
+          console.log("STATEPARK TEST")
+        async function gatherParkData(){
+            try{
+            const stateParkData = await getParks(stateIDParams);
+            console.log("StateParkData", stateParkData)
+            
+            setStateParkData(stateParkData.data)
+            }
+            catch(error){
+                console.error('Error fetching park data:', error)
+            }
+        }
+      
+    gatherParkData();}
+    },[stateIDParams])
+
+   
+  
+      
+
+
+    const mapPoints = stateParkData && stateParkData.map(park => {
+        return <Marker key={park.id} id={park.id} position={[park.latitude, park.longitude]} icon={parkIcon} >
             <Popup>
+              <Link to={`/states/${stateIDParams}/park/${park.id}`}>
                 <div className='park-popup'>
                     <p>{park.fullName}</p>
                     {park.images[0] && <img src={park.images[0].url} alt={park.images[0].altText}/>}
                 </div>
+              </Link>
             </Popup>
         </Marker> })
     
 
     useEffect(() => {
-      const distanceObject = calculateFurthestDistance(parksData);
+      console.log("stateParkData LENGTH:",stateParkData.length)
+      if(stateParkData.length >= 2){
+      const distanceObject = calculateFurthestDistance(stateParkData);
+      console.log("DISTANCE OBJECT",distanceObject)
       let cornerA = L.latLng(distanceObject.corner1);
       let cornerB = L.latLng(distanceObject.corner2);
       let bounds = L.latLngBounds(cornerA, cornerB);
-      map.flyToBounds(bounds)
-    },[mapPoints])
+      map.flyToBounds(bounds, {duration: .25})
+      }
+      else if(stateParkData.length === 1){
+        map.flyTo([stateParkData[0].latitude,stateParkData[0].longitude],14)
+      }
+    },[stateParkData, map])
     
 
     function calculateDistance(lat1, long1, lat2, long2) {
@@ -68,20 +109,7 @@ function StateParksMap() {
         return largestDistance;
       }
     
-    function calculateCenter(filteredBreweries) {
-        let longSum = 0;
-        let latSum = 0;
-        filteredBreweries.forEach(brewery => {
-          latSum += Number(brewery.latitude);
-          longSum += Number(brewery.longitude);
-        });
     
-        let mapCenter = {
-          latCenter: latSum / filteredBreweries.length,
-          longCenter: longSum / filteredBreweries.length,
-        };
-        return mapCenter;
-    }
 
 
 
