@@ -1,5 +1,5 @@
 import {useEffect,useState} from 'react';
-import {useNavigate,useParams} from 'react-router-dom'
+import {useNavigate,useParams, Link} from 'react-router-dom'
 import { useParksContext } from '../../Context/ParksContext';
 import { MapContainer, TileLayer, Marker, Popup, Pane, useMap, Map } from 'react-leaflet';
 import L from 'leaflet';
@@ -24,6 +24,7 @@ function StatePage(){
                 <StateParksMap/>
                
             </MapContainer>
+            <Link to='/'><button className='back-to-search'>Back to State Search</button></Link>
         </div>
     )
     

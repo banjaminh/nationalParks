@@ -12,9 +12,9 @@ function ParkPage(){
 
     const {stateParkData} = useParksContext();
     const parkId = useParams().parkID;
-    console.log("PARK ID", parkId)
+   
     const [park, setPark] = useState(null)
-   console.log("PARK", park)
+   
     const {favorites,toggleFavorites} = useFavoritesContext();
     const [isWish, setIsWish] = useState(false);
    
@@ -32,13 +32,10 @@ function ParkPage(){
       };
 
 
-    useState(() => {
+    useEffect(() => {
         if(park){
-        console.log("PARK TEST")
         const result = checkIfFavorite()
-        console.log("RESTUL", result)
         if(result !== undefined){
-            console.log("WISH TRUE")
             setIsWish(true)
         }
     }
