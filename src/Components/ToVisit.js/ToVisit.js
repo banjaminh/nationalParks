@@ -14,10 +14,14 @@ function ToVisit () {
         
     },[favorites])
 
+    console.log("WISH LIST ", wishList)
     const cards = wishList && wishList.map(wish => {
+        let stateID = wish.states.slice(0,2)
     return (<ParkCard
+        stateID = {stateID}
         key= {wish.id}
         id= {wish.id}
+        parkCode = {wish.parkCode}
         name= {wish.fullName}/>);})
 
     console.log("CARDS", cards)

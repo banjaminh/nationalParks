@@ -27,3 +27,9 @@
 .park-card h3{
     margin-left: 1em;
 }
+
+.park-card a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
