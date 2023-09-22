@@ -1,4 +1,11 @@
 .to-visit-container{
-    background-color: yellow;
-    height:100%
+    background-color: rgb(29, 55, 98);
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.to-visit-container h2{
+    color:rgb(227, 237, 239);
 }

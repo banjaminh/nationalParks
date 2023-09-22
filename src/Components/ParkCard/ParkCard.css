@@ -1,0 +1,29 @@
+.park-card img{
+    color: white;
+    height: 4em;
+    width: 4em;
+    margin-left: 1em;
+}
+
+.park-card {
+    width: 90%;
+    height: 10%;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    margin-bottom: .5em;
+    margin-top: .5em;
+    background-color: rgb(119, 238, 148);
+    box-shadow: 0 0 .7em rgba(0, 0, 0, 0.4);
+   transition: transform 0.3s ease-in-out;
+   
+}
+
+.park-card:hover {
+    cursor: default;
+    transform: scale(1.02) /* Remove the rotation on hover */
+}
+
+.park-card h3{
+    margin-left: 1em;
+}

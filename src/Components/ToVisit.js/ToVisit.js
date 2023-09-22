@@ -1,6 +1,7 @@
 import './ToVisit.css'
 import { useFavoritesContext } from '../../Context/FavoritesContext'
 import {useEffect,useState} from 'react'
+import ParkCard from '../ParkCard/ParkCard'
 
 
 function ToVisit () {
@@ -14,11 +15,15 @@ function ToVisit () {
     },[favorites])
 
     const cards = wishList && wishList.map(wish => {
-    return (<p>{wish.fullName}</p>);})
+    return (<ParkCard
+        key= {wish.id}
+        id= {wish.id}
+        name= {wish.fullName}/>);})
 
     console.log("CARDS", cards)
     return cards && (
         <div className='to-visit-container'>
+            <h2>Wish List:</h2>
             {cards}
         </div>
     )
