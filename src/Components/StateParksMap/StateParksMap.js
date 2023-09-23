@@ -16,6 +16,7 @@ const parkIcon = new Icon({
 function StateParksMap() {
     const map = useMap();
     const {parksData,stateParkData,setStateParkData} = useParksContext();
+    console.log("TEST PARK DATA", stateParkData)
     
 
     const stateIDParams = useParams().id
@@ -57,8 +58,8 @@ function StateParksMap() {
     
 
     useEffect(() => {
-      console.log("stateParkData LENGTH:",stateParkData.length)
-      if(stateParkData.length >= 2){
+      
+      if(stateParkData && stateParkData.length >= 2){
       const distanceObject = calculateFurthestDistance(stateParkData);
       console.log("DISTANCE OBJECT",distanceObject)
       let cornerA = L.latLng(distanceObject.corner1);
@@ -66,7 +67,7 @@ function StateParksMap() {
       let bounds = L.latLngBounds(cornerA, cornerB);
       map.flyToBounds(bounds, {duration: .25})
       }
-      else if(stateParkData.length === 1){
+      else if(stateParkData && stateParkData.length === 1){
         map.flyTo([stateParkData[0].latitude,stateParkData[0].longitude],14)
       }
     },[stateParkData, map])

@@ -15,8 +15,6 @@ function HomePage(){
         async function gatherParkData(){
             try{
             const parkData = await getParks();
-            
-            
             setParksData(parkData.data)
             }
             catch(error){
