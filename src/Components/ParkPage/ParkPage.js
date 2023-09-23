@@ -6,7 +6,7 @@ import ImageView from '../ImageView/ImageView';
 import { FavoritesContext, useFavoritesContext } from '../../Context/FavoritesContext';
 import { getPark } from '../../apiCalls';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar,faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 
 function ParkPage(){
@@ -19,6 +19,14 @@ function ParkPage(){
    
     const {favorites,toggleFavorites} = useFavoritesContext();
     const [isWish, setIsWish] = useState(false);
+
+    function formatPhoneNumber(number) {
+        const strNum = `${number}`;
+        return `(${strNum.substring(0, 3)}) ${strNum.substring(
+          3,
+          6
+        )}-${strNum.substring(6, 10)}`;
+      }
    
     useEffect(() => {
         const selectedPark = stateParkData.find((park) => park.parkCode === parkId) || null;
@@ -76,14 +84,13 @@ function ParkPage(){
 
     const activities =  park && park.activities && park.activities.length > 0 ? (
     
-            <div className='activities'>
-                <h3>Activities</h3>
+            
             <ul>
                 {park.activities.map((activity) => (
                     <li key={activity.id}>{activity.name}</li>
                 ))}
             </ul>
-            </div>
+           
 
     ) : (<p>No activites</p>)
   
@@ -98,21 +105,49 @@ function ParkPage(){
                                         <FontAwesomeIcon icon={faStar} />{isWish ? 'Remove from wish list' : 'Add to wish List'}
             </button>
             <h2>{park.fullName}</h2>
-            <p>{park.addresses[0].line1}</p>
-            <p>{park.addresses[0].city}</p>
-            <p>{park.addresses[0].stateCode}</p>
-            <p>{park.addresses[0].postalCode}</p> 
-            <div className='images-activities'>
-                <ImageView imageArray={park.images}/>
-                {activities}
+            <div className='contact-box'>
+                <div className='contact-title'>
+                    <p>Contact:</p>
+                </div>
+                <div className='contact-info'>
+                    <div className='address'>
+                        <p>{park.addresses[0].line1}</p>
+                        <p>{park.addresses[0].city}</p>
+                        <p>{park.addresses[0].stateCode}</p>
+                        <p>{park.addresses[0].postalCode}</p> 
+                    </div>
+                    <div className='email-phone'>
+                        <p><FontAwesomeIcon icon={faEnvelope} />{park.contacts.emailAddresses[0].emailAddress}</p>
+                        {park.contacts.phoneNumbers[0] && (<p><FontAwesomeIcon icon={faPhone} />{formatPhoneNumber(park.contacts.phoneNumbers[0].phoneNumber)}</p>)}
+                    </div>
+                </div>
             </div>
-            <p>{park.weatherInfo}</p>
+            <div className='images-activities'>
+                <div className='description'>
+                    <h3>About:</h3>
+                    <p>{park.description}</p>
+                </div>
+                <ImageView imageArray={park.images}/>
+                
+            </div>
+            <div className='activites-weather'>
+                <div className='activities-box'>
+                        <h3>Activities</h3>
+                        {activities}
+                </div>
+                <div className='weather'>
+                    <h3>Weather advisory:</h3>
+                    <p>{park.weatherInfo}</p>
+                </div>
+            </div>
             
         </div>
         ) : <div>no park data</div> )
     
 }
 
+
 export default ParkPage
+
             
                 

@@ -1,6 +1,6 @@
 .to-visit-container{
-    background-color: rgb(29, 55, 98);
-    height:100%;
+    
+    height:100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,5 +8,5 @@
 }
 
 .to-visit-container h2{
-    color:rgb(227, 237, 239);
+    color:rgb(2, 6, 6);
 }
