@@ -1,5 +1,5 @@
 import './ParkPage.css'
-import { Link , useParams} from 'react-router-dom'
+import { Link , useParams, useNavigate} from 'react-router-dom'
 import { useParksContext } from '../../Context/ParksContext';
 import {useState, useEffect} from 'react'
 import ImageView from '../ImageView/ImageView';
@@ -10,14 +10,13 @@ import { faStar,faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import weatherPic from './weather-app.png'
 
 
-function ParkPage(){
-    const stateID = useParams().id;
 
+function ParkPage(){
+    const navigate = useNavigate();
+    const stateID = useParams().id;
     const {stateParkData} = useParksContext();
     const parkId = useParams().parkID;
-   
     const [park, setPark] = useState(null)
-   
     const {favorites,toggleFavorites} = useFavoritesContext();
     const [isWish, setIsWish] = useState(false);
 
@@ -55,14 +54,14 @@ function ParkPage(){
     useEffect(() => {
         if(isPageRefreshed()){
         async function gatherParkData(){
-            try{
-            const parkData = await getPark(parkId);
-            console.log("Single Park Data", parkData)
             
+            const parkData = await getPark(parkId);
+            
+            if(parkData !== 'Error'){
             setPark(parkData.data[0])
             }
-            catch(error){
-                console.error('Error fetching park data:', error)
+            else{
+                navigate('*')
             }
         }
       
@@ -91,20 +90,10 @@ function ParkPage(){
         </ul>
        ) : (<p>No activites</p>)
        
-    
-            
-
-  
-    
-    console.log("PARK BEFORE RETURN ", park)
     return (park ? (
         <div className='park-info-page'>
             <Link to={`/states/${stateID}`}><button className='back-to-map'>Back to Map</button></Link>
-            <button className='wish-list-button' onClick={(e) => {
-                                    toggleFav()
-                                    toggleFavorites(park)}}>
-                                        <FontAwesomeIcon icon={faStar} />{isWish ? 'Remove from wish list' : 'Add to wish List'}
-            </button>
+            
             <div className='activites-info-wrapper'>
                 <div className='activities-box'>
                         <h3>Activities</h3>
@@ -113,6 +102,11 @@ function ParkPage(){
                 <div className='non-activities-info'>
                     <div className='header-wrapper'>
                         <h2>{park.fullName}</h2>
+                        <button className='wish-list-button' onClick={(e) => {
+                                    toggleFav()
+                                    toggleFavorites(park)}}>
+                                        <FontAwesomeIcon icon={faStar} />{isWish ? 'Remove from wish list' : 'Add to wish List'}
+                        </button>
                     </div>
                     <div className='contact-wrapper'>
                         <div className='contact-box'>
@@ -168,3 +162,4 @@ function ParkPage(){
             
                 
                             
+   

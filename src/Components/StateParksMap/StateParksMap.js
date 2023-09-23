@@ -4,7 +4,7 @@ import './StateParksMap.css'
 import { useParksContext } from '../../Context/ParksContext';
 import {useEffect} from 'react'
 import {Icon} from 'leaflet'
-import {useParams, Link} from 'react-router-dom'
+import {useParams, Link, useNavigate} from 'react-router-dom'
 import { getParks } from '../../apiCalls';
 
 const parkIcon = new Icon({
@@ -16,27 +16,24 @@ const parkIcon = new Icon({
 function StateParksMap() {
     const map = useMap();
     const {parksData,stateParkData,setStateParkData} = useParksContext();
-    console.log("TEST PARK DATA", stateParkData)
+    const stateIDParams = useParams().id
+   const navigate = useNavigate();
     
 
-    const stateIDParams = useParams().id
     
-    useEffect(() => {
-        if(stateParkData.length === 0){
-          console.log("STATEPARK TEST")
+    useEffect(() => {   
         async function gatherParkData(){
-            try{
             const stateParkData = await getParks(stateIDParams);
-            console.log("StateParkData", stateParkData)
             
+            if(stateParkData != 'Error'){
             setStateParkData(stateParkData.data)
             }
-            catch(error){
-                console.error('Error fetching park data:', error)
+            else{
+              navigate('*')
             }
         }
       
-    gatherParkData();}
+    gatherParkData();
     },[stateIDParams])
 
    
@@ -61,7 +58,6 @@ function StateParksMap() {
       
       if(stateParkData && stateParkData.length >= 2){
       const distanceObject = calculateFurthestDistance(stateParkData);
-      console.log("DISTANCE OBJECT",distanceObject)
       let cornerA = L.latLng(distanceObject.corner1);
       let cornerB = L.latLng(distanceObject.corner2);
       let bounds = L.latLngBounds(cornerA, cornerB);
@@ -110,16 +106,6 @@ function StateParksMap() {
         return largestDistance;
       }
     
-    
-
-
-
-    
-    // console.log("PARKS DATA",parksData)
-    // const mapPoints = parksData.map(park => {
-    //     return <Marker key={park.id} id={park.id} position={[park.latitude, park.longitude]} ></Marker> })
-    
-    // map.flyTo([59.0518 ,-156.112], 15)
     return (
         <>{mapPoints}</>
     )

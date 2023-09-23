@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 
 
 function ParkCard({name, stateID, parkCode}){
-    console.log("PARK CARD PARAMS",useParams())
 
     return (
         <div className='park-card'>

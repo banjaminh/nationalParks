@@ -15,8 +15,7 @@ describe('Homepage Interactions', () => {
       cy.intercept('GET', 'http://localhost:3000/states/AL/park/alag',
       {statusCode: 200, fixture : 'singlePark.json'}
       ).as('singlePark')
-  
-      })
+    })
   
   
     it.skip('Should select a state and view map and add to wish list and remove', () => {
@@ -67,6 +66,8 @@ describe('Homepage Interactions', () => {
         cy.get('button').click()
         cy.url().should('eq', 'http://localhost:3000/')
     })
+
     
-    
+
+
 })
