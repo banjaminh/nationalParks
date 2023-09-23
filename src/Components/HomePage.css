@@ -1,9 +1,8 @@
 .overlay{
     display: flex;
-    
-    height:85vh;
+    height:100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    background-image: url('./natureMap.jpeg');
-    background-size: 100% 100%;
+    background-image: url('./mapnobackground.png');
+    background-repeat: no-repeat;
+    background-position: center center;
 }

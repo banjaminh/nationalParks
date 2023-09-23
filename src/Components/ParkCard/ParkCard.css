@@ -1,13 +1,13 @@
 .park-card img{
     color: white;
-    height: 4em;
-    width: 4em;
+    height: 15%;
+    width: 15%;
     margin-left: 1em;
 }
 
 .park-card {
-    width: 20em;
-    height: 6em;
+    width: 90%;
+    height: 10%;
     border: 2px solid black;
     display: flex;
     align-items: center;
@@ -26,11 +26,19 @@
 
 .park-card h3{
     margin-left: 1em;
-    font-size:1em;
+    font-size: 90%;
 }
 
 .park-card a{
     display: flex;
     align-items: center;
     text-decoration: none;
+    
+}
+
+@media screen and (max-width: 600px) {
+    .park-card{
+        height:20%;
+        overflow-y: auto;
+    }
 }

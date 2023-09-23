@@ -7,6 +7,7 @@ import {useFavoritesContext } from '../../Context/FavoritesContext';
 import { getPark } from '../../apiCalls';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar,faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import weatherPic from './weather-app.png'
 
 
 function ParkPage(){
@@ -104,50 +105,66 @@ function ParkPage(){
                                     toggleFavorites(park)}}>
                                         <FontAwesomeIcon icon={faStar} />{isWish ? 'Remove from wish list' : 'Add to wish List'}
             </button>
-            <h2>{park.fullName}</h2>
-            <div className='contact-box'>
-                <div className='contact-title'>
-                    <p>Contact:</p>
-                </div>
-                <div className='contact-info'>
-                    <div className='address'>
-                        <p>{park.addresses[0].line1}</p>
-                        <p>{park.addresses[0].city}</p>
-                        <p>{park.addresses[0].stateCode}</p>
-                        <p>{park.addresses[0].postalCode}</p> 
-                    </div>
-                    <div className='email-phone'>
-                        <p><FontAwesomeIcon icon={faEnvelope} />{park.contacts.emailAddresses[0].emailAddress}</p>
-                        {park.contacts.phoneNumbers[0] && (<p><FontAwesomeIcon icon={faPhone} />{formatPhoneNumber(park.contacts.phoneNumbers[0].phoneNumber)}</p>)}
-                    </div>
-                </div>
-            </div>
-            <div className='images-activities'>
-                <div className='description'>
-                    <h3>About:</h3>
-                    <p>{park.description}</p>
-                </div>
-                <ImageView imageArray={park.images}/>
-                
-            </div>
-            <div className='activites-weather'>
+            <div className='activites-info-wrapper'>
                 <div className='activities-box'>
                         <h3>Activities</h3>
                         {activities}
                 </div>
-                <div className='weather'>
-                    <h3>Weather advisory:</h3>
-                    <p>{park.weatherInfo}</p>
+                <div className='non-activities-info'>
+                    <div className='header-wrapper'>
+                        <h2>{park.fullName}</h2>
+                    </div>
+                    <div className='contact-wrapper'>
+                        <div className='contact-box'>
+                            
+                            <div className='contact-info'>
+                                <div className='address'>
+                                    <p>{park.addresses[0].line1}</p>
+                                    <p>{park.addresses[0].city},{park.addresses[0].stateCode} {park.addresses[0].postalCode}</p>
+        
+                                </div>
+                                <div className='email-phone'>
+                                    <p><FontAwesomeIcon className='info-icon' icon={faEnvelope} />{park.contacts.emailAddresses[0].emailAddress}</p>
+                                    {park.contacts.phoneNumbers[0] && (<p><FontAwesomeIcon className='info-icon' icon={faPhone} />{formatPhoneNumber(park.contacts.phoneNumbers[0].phoneNumber)}</p>)}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='images-activities'>
+                        
+                        <ImageView imageArray={park.images}/>
+                        
+                    </div>
+                    <div className='about-weather'>
+                        
+                        
+                        <div className='description'>
+                            <h3>About:</h3>
+                            <p>{park.description}</p>
+                        </div>
+                        <div className='weather'>
+                            <div className='weather-img'>
+                                <img src={weatherPic}/>
+                            </div>
+                            <div className='weather-info'>
+                                <h3>Weather advisory:</h3>
+                                <p>{park.weatherInfo}</p>
+                            </div>
+                                
+
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    
                 </div>
-            </div>
-            
-        </div>
-        ) : <div>no park data</div> )
+                ) : <div>no park data</div> )
     
 }
 
 
 export default ParkPage
+                    
 
             
                 

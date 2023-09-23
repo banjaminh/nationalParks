@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import HomePage from './Components/HomePage'
 import Header from './Components/Header/Header'
@@ -24,39 +24,39 @@ function App() {
         <div className="App">
           <Header />
           <div className='main-wrap'>
-
-          <div className='routes'>
-
-          <Routes>
-            
-
-            
-            <Route path='/' element= {<HomePage/>}/>
-              
-            <Route path="/states/:id" element={<StatePageLayout />}>
-              <Route index element={<StatePage />} /> 
-              <Route path="park/:parkID" element={<ParkPage />}/>
-            </Route>
-            <Route path="*" element={<ErrorPage/>}></Route>
+            <div className='routes'>
+            <Routes>
+              <Route path='/' element= {<HomePage/>}/>
+              <Route path="/states/:id" element={<StatePageLayout />}>
+                <Route index element={<StatePage />} /> 
+                <Route path="park/:parkID" element={<ParkPage />}/>
+              </Route>
+              <Route path="*" element={<ErrorPage/>}></Route>
+            </Routes>
+            </div>
+            <div className='to-visit'>
+              <ToVisit />
+            </div>
+            </div>
+          </div>
+        </FavoritesContextProvider>
+      </ParksContextProvider>
+      );
                 
+    }
+    export default App;
+
+
+                
+            
+
+            
            
 
-          </Routes>
-          </div>
-          <div className='to-visit'>
-            <ToVisit />
-          </div>
-          </div>
           
           
-        </div>
-      </FavoritesContextProvider>
-    </ParksContextProvider>
     
 
           
 
-  );
-}
 
-export default App;

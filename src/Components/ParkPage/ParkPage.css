@@ -1,7 +1,11 @@
 .park-info-page{
     width:100%;
+    height: 100%;
     position: relative;
+    background-color: rgba(0, 0, 0,.6);
+    color: white;
 }
+
 
 .back-to-map{
    position: absolute;
@@ -13,6 +17,7 @@
     display: flex;
     justify-content: space-around;
     margin-top: 1em;
+    
 }
 
 
@@ -23,20 +28,22 @@
 }
 
 .contact-box{
-    background-color: brown;
-    width: 27em;
-    height: 7em;
+    margin-top: 1em;
+    width: 40%;
+    height: 100%;
     border-radius: .6em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
     
 }
 
 .contact-info{
-    color: white;
     display: flex;
+}
+
+.info-icon{
+    margin-right: .5em;
 }
 
 .email-phone{
@@ -49,7 +56,9 @@
 .activities-box{
     display: flex;
     flex-direction: column;
-    margin-left: 2%;
+    width: 20%;
+    align-items: center;
+    
     
 }
 
@@ -57,7 +66,7 @@
     width: 30%;
 }
 
-.activites-weather{
+.about-weather{
     display: flex;
     justify-content: space-around;
     margin-top: 2em;
@@ -65,4 +74,55 @@
 
 .weather{
     width: 40%;
+    display: flex;
+}
+
+.activites-info-wrapper{
+    display:flex;
+    margin-left: 2em;
+    
+}
+
+.non-activities-info{
+    display:flex;
+    flex-direction: column;
+}
+
+.header-wrapper{
+    text-align: center;
+}
+
+.contact-wrapper{
+    display:flex;
+    justify-content: center;
+}
+
+.weather-img img{
+    height: 3em;
+    width: 3em;
+    margin-right: 1em;
+    background-color: white;
+}
+
+@media screen and (max-width: 900px) {
+    .activities-box{
+        margin-left: 0;
+    }
+    .non-activities-info{
+        flex-direction: column;
+    }
+    .contact-info{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2em;
+    }
+    .back-to-map{
+        top: 2.5em;
+    }
+    .wish-list-button{
+        top: 2.5em;
+    }
+    .park-info-page{
+        overflow-y: auto;
+    }
 }
