@@ -2,7 +2,7 @@
 ## 📝 Description
 Are you a park lover? If so, this is the application for you! This application allows a user to search over 450+ parks aross the US. If you love a park add it to your wish list! 
 
-Visit the app [here!](https://brew-buddy.vercel.app/)
+Visit the app [here!]((https://national-parks-eta.vercel.app/))
 
 
 ## 📷 Preview
