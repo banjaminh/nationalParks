@@ -9,6 +9,7 @@ import { FavoritesContextProvider } from './Context/FavoritesContext';
 import ToVisit from './Components/ToVisit.js/ToVisit'
 import ParkPage from './Components/ParkPage/ParkPage'
 import StatePageLayout from './Components/Layout/StatePageLayout';
+import ErrorPage from './Components/ErrorPage/ErrorPage'
 
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
@@ -36,6 +37,7 @@ function App() {
               <Route index element={<StatePage />} /> 
               <Route path="park/:parkID" element={<ParkPage />}/>
             </Route>
+            <Route path="*" element={<ErrorPage/>}></Route>
                 
            
 

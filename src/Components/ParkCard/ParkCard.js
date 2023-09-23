@@ -1,6 +1,7 @@
 import './ParkCard.css'
 import treesIcon from './national-park.png'
 import {Link, useParams} from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 
 function ParkCard({name, stateID, parkCode}){
@@ -15,5 +16,11 @@ function ParkCard({name, stateID, parkCode}){
         </div>
     )
 }
+
+ParkCard.propTypes = {
+    name: PropTypes.string.isRequired, 
+    stateID: PropTypes.string.isRequired, 
+    parkCode: PropTypes.string.isRequired, 
+  };
 
 export default ParkCard
