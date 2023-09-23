@@ -5,6 +5,8 @@ import {useState, useEffect} from 'react'
 import ImageView from '../ImageView/ImageView';
 import { FavoritesContext, useFavoritesContext } from '../../Context/FavoritesContext';
 import { getPark } from '../../apiCalls';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 
 function ParkPage(){
@@ -90,17 +92,16 @@ function ParkPage(){
     return (park ? (
         <div className='park-info-page'>
             <Link to={`/states/${stateID}`}><button className='back-to-map'>Back to Map</button></Link>
-            <button onClick={(e) => {
+            <button className='wish-list-button' onClick={(e) => {
                                     toggleFav()
-                                    toggleFavorites(park)}}>{isWish ? 'Remove from wish list' : 'Add to wish List'}
+                                    toggleFavorites(park)}}>
+                                        <FontAwesomeIcon icon={faStar} />{isWish ? 'Remove from wish list' : 'Add to wish List'}
             </button>
             <h2>{park.fullName}</h2>
-            {park.addressses && park.addresses[0] && (
-                <>
             <p>{park.addresses[0].line1}</p>
             <p>{park.addresses[0].city}</p>
             <p>{park.addresses[0].stateCode}</p>
-            <p>{park.addresses[0].postalCode}</p> </>)}
+            <p>{park.addresses[0].postalCode}</p> 
             <div className='images-activities'>
                 <ImageView imageArray={park.images}/>
                 {activities}
@@ -108,8 +109,10 @@ function ParkPage(){
             <p>{park.weatherInfo}</p>
             
         </div>
-        ) : <div><Link to={`/states/${stateID}`}><button className='back-to-map'>Back to Map</button></Link><div>no park data</div></div> )
+        ) : <div>no park data</div> )
     
 }
 
 export default ParkPage
+            
+                

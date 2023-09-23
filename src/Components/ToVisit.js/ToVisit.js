@@ -10,6 +10,7 @@ function ToVisit () {
     const [wishList, setWishList] = useState([]);
 
     useEffect(() => {
+        console.log("TO VISIT!!!!")
         setWishList(favorites);
         
     },[favorites])
