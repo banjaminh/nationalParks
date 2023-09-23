@@ -10,6 +10,7 @@
 
 .main-wrap{
   display: flex;
+  background-color: bisque;
 }
 
 .routes{
@@ -17,6 +18,5 @@
 }
 
 .to-visit{
-  background-color: blueviolet;
-  width: 20%;
+   width: 20%;
 }
