@@ -4,21 +4,24 @@ import './HomePage.css'
 import Form from './Form/Form'
 import { useParksContext } from '../Context/ParksContext'
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
 function HomePage(){
     const {setParksData, parksData} = useParksContext()
+    const navigate = useNavigate()
 
-    
     useEffect(() => {
         async function gatherParkData(){
-            try{
+            
             const parkData = await getParks();
+            if(parkData !== 'Error'){
             setParksData(parkData.data)
             }
-            catch(error){
-                console.error('Error fetching park data:', error)
+            else{
+                navigate('*')
             }
+            
         }
     gatherParkData();
     },[setParksData])

@@ -31,3 +31,10 @@
       width: 15em;
     }
   }
+
+  @media screen and (max-width: 485px) {
+    .image-container img{
+      height: 5em;
+      width: 7.5em;
+    }
+  }

@@ -25,7 +25,6 @@ function ImageView({imageArray}){
     useEffect(() => {
         setIndex(0)
     },[imageArray])
-    console.log("INDEX VALUE",index)
     
 
     return imageArray.length != 0 && imageArray[index] ? (

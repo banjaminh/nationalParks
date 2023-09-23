@@ -36,9 +36,14 @@
     
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
     .park-card{
         height:20%;
         overflow-y: auto;
     }
+    .park-card img{
+        height:1em;
+        width:1em;
+    }
+    
 }
