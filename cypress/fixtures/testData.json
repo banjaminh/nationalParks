@@ -1,0 +1,732 @@
+{
+    "data": [
+        {
+            "id": "C4E1A9A4-D121-4734-94FA-7788A93C2AAA",
+            "url": "https://www.nps.gov/alag/index.htm",
+            "fullName": "Alagnak Wild River",
+            "parkCode": "alag",
+            "description": "The headwaters of Alagnak Wild River lie within the rugged Aleutian Range of neighboring Katmai National Park and Preserve. Meandering west towards Bristol Bay and the Bering Sea, the Alagnak traverses the beautiful Alaska Peninsula, providing an unparalleled opportunity to experience the unique wilderness, wildlife, and cultural heritage of southwest Alaska.",
+            "latitude": "59.05180188",
+            "longitude": "-156.112002",
+            "latLong": "lat:59.05180188, long:-156.112002",
+            "activities": [
+                {
+                    "id": "071BA73C-1D3C-46D4-A53C-00D5602F7F0E",
+                    "name": "Boating"
+                },
+                {
+                    "id": "A59947B7-3376-49B4-AD02-C0423E08C5F7",
+                    "name": "Camping"
+                },
+                {
+                    "id": "4A58AF13-E8FB-4530-B41A-97DF0B0C77B7",
+                    "name": "Backcountry Camping"
+                },
+                {
+                    "id": "AE42B46C-E4B7-4889-A122-08FE180371AE",
+                    "name": "Fishing"
+                },
+                {
+                    "id": "8386EEAF-985F-4DE8-9037-CCF91975AC94",
+                    "name": "Hunting and Gathering"
+                },
+                {
+                    "id": "25559F45-F162-4B8B-BEC2-B341034A2AF4",
+                    "name": "Hunting"
+                },
+                {
+                    "id": "4D224BCA-C127-408B-AC75-A51563C42411",
+                    "name": "Paddling"
+                },
+                {
+                    "id": "256543C7-4322-48B3-8978-765E89AA9431",
+                    "name": "Canoe or Kayak Camping"
+                },
+                {
+                    "id": "F353A9ED-4A08-456E-8DEC-E61974D0FEB6",
+                    "name": "Kayaking"
+                },
+                {
+                    "id": "75B92BEB-A36D-4064-88B7-92EEC6D17611",
+                    "name": "Whitewater Rafting"
+                },
+                {
+                    "id": "0B685688-3405-4E2A-ABBA-E3069492EC50",
+                    "name": "Wildlife Watching"
+                },
+                {
+                    "id": "5A2C91D1-50EC-4B24-8BED-A2E11A1892DF",
+                    "name": "Birdwatching"
+                }
+            ],
+            "topics": [
+                {
+                    "id": "7F81A0CB-B91F-4896-B9A5-41BE9A54A27B",
+                    "name": "Archeology"
+                },
+                {
+                    "id": "0D00073E-18C3-46E5-8727-2F87B112DDC6",
+                    "name": "Animals"
+                },
+                {
+                    "id": "957EF2BD-AC6C-4B7B-BD9A-87593ADC6691",
+                    "name": "Birds"
+                },
+                {
+                    "id": "1608649A-E7D7-4529-BD83-074C90F9FB68",
+                    "name": "Fish"
+                },
+                {
+                    "id": "77B7EFDF-1A74-409C-8BA2-324EC919DB0E",
+                    "name": "Arctic"
+                },
+                {
+                    "id": "C8F16A24-90B7-47D9-B2E0-5F2A9237D0F4",
+                    "name": "Tundra"
+                },
+                {
+                    "id": "4BE01DC5-52E6-4F18-8C9A-B22D65965F6D",
+                    "name": "Groundwater"
+                },
+                {
+                    "id": "A155238F-0DD2-4610-9B87-05FCE1C59283",
+                    "name": "River and Riparian"
+                },
+                {
+                    "id": "1365C347-952C-475A-B755-731DD523C195",
+                    "name": "Wetlands"
+                },
+                {
+                    "id": "B85866E2-0897-4000-9040-605CA335804F",
+                    "name": "Wilderness"
+                }
+            ],
+            "states": "AK",
+            "contacts": {
+                "phoneNumbers": [
+                    {
+                        "phoneNumber": "9072463305",
+                        "description": "",
+                        "extension": "",
+                        "type": "Voice"
+                    }
+                ],
+                "emailAddresses": [
+                    {
+                        "description": "",
+                        "emailAddress": "KATM_Visitor_Information@nps.gov"
+                    }
+                ]
+            },
+            "entranceFees": [],
+            "entrancePasses": [],
+            "fees": [],
+            "directionsInfo": "Alagnak Wild River is located in a remote part of the Alaska Peninsula, about 290 miles southwest of Anchorage. Access is by boat or small floatplane.",
+            "directionsUrl": "http://www.nps.gov/alag/planyourvisit/directions.htm",
+            "operatingHours": [
+                {
+                    "exceptions": [],
+                    "description": "Alagnak Wild River is never closed, but access can be difficult during the winter.",
+                    "standardHours": {
+                        "wednesday": "All Day",
+                        "monday": "All Day",
+                        "thursday": "All Day",
+                        "sunday": "All Day",
+                        "tuesday": "All Day",
+                        "friday": "All Day",
+                        "saturday": "All Day"
+                    },
+                    "name": "Alagnak Wild River"
+                }
+            ],
+            "addresses": [
+                {
+                    "postalCode": "99613",
+                    "city": "King Salmon",
+                    "stateCode": "AK",
+                    "countryCode": "US",
+                    "provinceTerritoryCode": "",
+                    "line1": "1000 Silver St., Bldg. 603",
+                    "type": "Physical",
+                    "line3": "",
+                    "line2": "PO Box 7"
+                },
+                {
+                    "postalCode": "99613",
+                    "city": "King Salmon",
+                    "stateCode": "AK",
+                    "countryCode": "US",
+                    "provinceTerritoryCode": "",
+                    "line1": "PO Box 245",
+                    "type": "Mailing",
+                    "line3": "",
+                    "line2": ""
+                }
+            ],
+            "images": [
+                {
+                    "credit": "NPS/R. Wood",
+                    "title": "salmon in Alagnak River",
+                    "altText": "underwater photo of salmon swimming in river",
+                    "caption": "Each summer, hundreds of thousands of salmon return to the Alagnak watershed to spawn.",
+                    "url": "https://www.nps.gov/common/uploads/structured_data/3C7E810E-1DD8-B71B-0B92FDF31F5C0CA6.jpg"
+                },
+                {
+                    "credit": "NPS/R. Wood",
+                    "title": "Rafts along the river",
+                    "altText": "inflatable rafts on the edge of a river",
+                    "caption": "Rafting is a popular way to experience the river.",
+                    "url": "https://www.nps.gov/common/uploads/structured_data/3C7E8259-1DD8-B71B-0B45810F0CB6E02C.jpg"
+                },
+                {
+                    "credit": "NPS",
+                    "title": "Alagnak Wild River",
+                    "altText": "aerial view of braided Alagnak River",
+                    "caption": "Alagnak River's lower reaches are extremely braided.",
+                    "url": "https://www.nps.gov/common/uploads/structured_data/3C7E8391-1DD8-B71B-0BB3E18B7F96110A.jpg"
+                }
+            ],
+            "weatherInfo": "Located between the stormy north Pacific Ocean and the even stormier Bering Sea, the Alagnak Wild River is often a battleground between weather systems. When you visit, be prepared to encounter all types of weather.  On average, wet and cool conditions predominate in spring, summer, and fall. Winters are drier and colder.",
+            "name": "Alagnak",
+            "designation": "Wild River"
+        },
+        {
+            "id": "7D6098F9-3F75-4775-A56D-CD9C7F9A9488",
+            "url": "https://www.nps.gov/anch/index.htm",
+            "fullName": "Alaska Public Lands",
+            "parkCode": "anch",
+            "description": "Alaska’s parks, forests, and refuges are rich and varied. The Alaska Public Lands Information Centers help visitors and residents to have meaningful, safe, enjoyable experiences on public lands, and encourages them to sustain the natural and cultural resources of Alaska. These centers provide trip-planning, interpretation, and education for all ages.",
+            "latitude": "61.2188",
+            "longitude": "-149.894536",
+            "latLong": "lat:61.2188, long:-149.894536",
+            "activities": [],
+            "topics": [],
+            "states": "AK",
+            "contacts": {
+                "phoneNumbers": [
+                    {
+                        "phoneNumber": "9076443661",
+                        "description": "",
+                        "extension": "",
+                        "type": "Voice"
+                    },
+                    {
+                        "phoneNumber": "9072712744",
+                        "description": "",
+                        "extension": "",
+                        "type": "Fax"
+                    },
+                    {
+                        "phoneNumber": "8668696887",
+                        "description": "",
+                        "extension": "",
+                        "type": "TTY"
+                    }
+                ],
+                "emailAddresses": [
+                    {
+                        "description": "ANCHORAGE LOCATION = anch_web_mail@nps.gov\n\nFAIRBANKS  LOCATION = fair_interpretation@nps.gov",
+                        "emailAddress": "anch_web_mail@nps.gov"
+                    }
+                ]
+            },
+            "entranceFees": [],
+            "entrancePasses": [],
+            "fees": [],
+            "directionsInfo": "Anchorage APLIC is located in downtown Anchorage on 4th Avenue, in the Federal Building. Fairbanks APLIC is located in downtown Fairbanks on the corner of Dunkel Street and Wendell Avenue, near the Chena River.",
+            "directionsUrl": "http://alaskacenters.gov/anchorage-directions.cfm",
+            "operatingHours": [
+                {
+                    "exceptions": [
+                        {
+                            "exceptionHours": {
+                                "wednesday": "10:00AM - 5:00PM",
+                                "monday": "10:00AM - 5:00PM",
+                                "thursday": "10:00AM - 5:00PM",
+                                "sunday": "Closed",
+                                "tuesday": "10:00AM - 5:00PM",
+                                "friday": "Closed",
+                                "saturday": "Closed"
+                            },
+                            "startDate": "2023-09-11",
+                            "name": "Winter Hours",
+                            "endDate": "2024-05-24"
+                        },
+                        {
+                            "exceptionHours": {},
+                            "startDate": "2023-10-09",
+                            "name": "Closed for Columbus Day",
+                            "endDate": "2023-10-09"
+                        },
+                        {
+                            "exceptionHours": {},
+                            "startDate": "2023-11-11",
+                            "name": "Closed for Veterans Day",
+                            "endDate": "2023-11-11"
+                        },
+                        {
+                            "exceptionHours": {},
+                            "startDate": "2023-11-23",
+                            "name": "Closed for Thanksgiving Day",
+                            "endDate": "2023-11-23"
+                        },
+                        {
+                            "exceptionHours": {},
+                            "startDate": "2023-12-25",
+                            "name": "Closed for Christmas Day",
+                            "endDate": "2023-12-25"
+                        },
+                        {
+                            "exceptionHours": {},
+                            "startDate": "2024-01-01",
+                            "name": "Closed New Year's Day",
+                            "endDate": "2024-01-01"
+                        },
+                        {
+                            "exceptionHours": {},
+                            "startDate": "2024-01-15",
+                            "name": "Closed for Birthday of Maritn Luther King, Jr.",
+                            "endDate": "2024-01-15"
+                        },
+                        {
+                            "exceptionHours": {},
+                            "startDate": "2024-02-19",
+                            "name": "Closed for Washington's Birthday",
+                            "endDate": "2024-02-19"
+                        }
+                    ],
+                    "description": "ANCHORAGE LOCATION:\nSummer Hours: 9-5, Daily; Late May to Mid-September; Open Federal Holidays / \nWinter Hours: 10-5, Monday-Thursday (closed for lunch 12-1); September to Early May; Closed Federal Holidays.",
+                    "standardHours": {
+                        "wednesday": "9:00AM - 5:00PM",
+                        "monday": "9:00AM - 5:00PM",
+                        "thursday": "9:00AM - 5:00PM",
+                        "sunday": "9:00AM - 5:00PM",
+                        "tuesday": "9:00AM - 5:00PM",
+                        "friday": "9:00AM - 5:00PM",
+                        "saturday": "9:00AM - 5:00PM"
+                    },
+                    "name": "Anchorage Hours"
+                },
+                {
+                    "exceptions": [
+                        {
+                            "exceptionHours": {
+                                "wednesday": "8:00AM - 5:00PM",
+                                "monday": "8:00AM - 5:00PM",
+                                "thursday": "8:00AM - 5:00PM",
+                                "sunday": "Closed",
+                                "tuesday": "8:00AM - 5:00PM",
+                                "friday": "8:00AM - 5:00PM",
+                                "saturday": "8:00AM - 5:00PM"
+                            },
+                            "startDate": "2023-09-04",
+                            "name": "Winter Hours",
+                            "endDate": "2024-05-27"
+                        },
+                        {
+                            "exceptionHours": {},
+                            "startDate": "2023-10-09",
+                            "name": "Closed for Columbus Day",
+                            "endDate": "2023-10-09"
+                        },
+                        {
+                            "exceptionHours": {},
+                            "startDate": "2023-11-11",
+                            "name": "Closed for Veterans Day",
+                            "endDate": "2023-11-11"
+                        },
+                        {
+                            "exceptionHours": {},
+                            "startDate": "2023-11-23",
+                            "name": "Closed for Thanksgiving Day",
+                            "endDate": "2023-11-23"
+                        },
+                        {
+                            "exceptionHours": {},
+                            "startDate": "2023-12-25",
+                            "name": "Closed for Christmas Day",
+                            "endDate": "2023-12-25"
+                        },
+                        {
+                            "exceptionHours": {},
+                            "startDate": "2024-01-01",
+                            "name": "Closed for New Year's Day",
+                            "endDate": "2024-01-01"
+                        },
+                        {
+                            "exceptionHours": {},
+                            "startDate": "2024-01-15",
+                            "name": "Closed for Birthday of Martin Luther King, Jr.",
+                            "endDate": "2024-01-15"
+                        },
+                        {
+                            "exceptionHours": {},
+                            "startDate": "2024-02-19",
+                            "name": "Closed for Washington's Birthday",
+                            "endDate": "2024-02-19"
+                        }
+                    ],
+                    "description": "FAIRBANKS LOCATION:\nSummer Hours: 8-6, Daily; Memorial Day through Labor Day; Open Federal Holidays / \nWinter Hours: 8-5, Monday-Saturday; Labor Day through Memorial Day; Closed Federal Holidays.",
+                    "standardHours": {
+                        "wednesday": "8:00AM - 6:00PM",
+                        "monday": "8:00AM - 6:00PM",
+                        "thursday": "8:00AM - 6:00PM",
+                        "sunday": "8:00AM - 6:00PM",
+                        "tuesday": "8:00AM - 6:00PM",
+                        "friday": "8:00AM - 6:00PM",
+                        "saturday": "8:00AM - 6:00PM"
+                    },
+                    "name": "Fairbanks Hours"
+                }
+            ],
+            "addresses": [
+                {
+                    "postalCode": "99501",
+                    "city": "Anchorage",
+                    "stateCode": "AK",
+                    "countryCode": "US",
+                    "provinceTerritoryCode": "",
+                    "line1": "605 West 4th Avenue",
+                    "type": "Physical",
+                    "line3": "",
+                    "line2": "Suite 105"
+                },
+                {
+                    "postalCode": "99501",
+                    "city": "Anchorage",
+                    "stateCode": "AK",
+                    "countryCode": "US",
+                    "provinceTerritoryCode": "",
+                    "line1": "605 West 4th Avenue",
+                    "type": "Mailing",
+                    "line3": "",
+                    "line2": "Suite 105"
+                }
+            ],
+            "images": [
+                {
+                    "credit": "NPS/Josh Spice",
+                    "title": "Hikers on Angel Rocks",
+                    "altText": "Two Hikers stand on top of a very large granite boulder, looking out across the landscape",
+                    "caption": "Hikers on top of Angel Rocks near Fairbanks look out across the landscape of Chena River State Recreation Area",
+                    "url": "https://www.nps.gov/common/uploads/structured_data/2595FA12-DF7A-1B6C-55D8F41ABCA2E011.jpg"
+                },
+                {
+                    "credit": "NPS",
+                    "title": "Anchorage APLIC",
+                    "altText": "Front of the Anchorage Federal Building, housing the Anchorage APLIC",
+                    "caption": "The Anchorage APLIC is located inside the Federal Building",
+                    "url": "https://www.nps.gov/common/uploads/structured_data/3C86397B-1DD8-B71B-0B8F02FE5D76B46D.jpg"
+                },
+                {
+                    "credit": "NPS/Josh Spice",
+                    "title": "Fairbanks APLIC",
+                    "altText": "Fairbanks Alaska Public Lands Information Center, located inside the Morris Thompson Cultural & Visi",
+                    "caption": "Fairbanks Alaska Public Lands Information Center, located inside the Morris Thompson Cultural & Visitors Center, in summer",
+                    "url": "https://www.nps.gov/common/uploads/structured_data/3C860F61-1DD8-B71B-0B4E7399BE80347C.jpg"
+                }
+            ],
+            "weatherInfo": "Visitors center is located inside the Federal Building and weather conditions are seasonal conditions of the Anchorage area, outside the facility.",
+            "name": "Alaska Public Lands",
+            "designation": ""
+        },
+        {
+            "id": "94B046DC-2AFD-4ECB-A60D-CE210A8550B1",
+            "url": "https://www.nps.gov/aleu/index.htm",
+            "fullName": "Aleutian Islands World War II National Historic Area",
+            "parkCode": "aleu",
+            "description": "During World War II the remote Aleutian Islands, home to the Unangax̂ (Aleut) people for over 8,000 years, became a fiercely contested battleground in the Pacific. This thousand-mile-long archipelago saw invasion by Japanese forces, the occupation of two islands; a mass relocation of Unangax̂ civilians; a 15-month air war; and one of the deadliest battles in the Pacific Theater.",
+            "latitude": "53.9143",
+            "longitude": "-166.5197",
+            "latLong": "lat:53.9143, long:-166.5197",
+            "activities": [
+                {
+                    "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
+                    "name": "Guided Tours"
+                },
+                {
+                    "id": "A0631906-9672-4583-91DE-113B93DB6B6E",
+                    "name": "Self-Guided Tours - Walking"
+                },
+                {
+                    "id": "C7D5A145-F8EB-4C37-9E92-2F6C6206B196",
+                    "name": "Self-Guided Tours - Auto"
+                },
+                {
+                    "id": "DF4A35E0-7983-4A3E-BC47-F37B872B0F25",
+                    "name": "Junior Ranger Program"
+                },
+                {
+                    "id": "0B685688-3405-4E2A-ABBA-E3069492EC50",
+                    "name": "Wildlife Watching"
+                },
+                {
+                    "id": "5A2C91D1-50EC-4B24-8BED-A2E11A1892DF",
+                    "name": "Birdwatching"
+                },
+                {
+                    "id": "C8F98B28-3C10-41AE-AA99-092B3B398C43",
+                    "name": "Museum Exhibits"
+                }
+            ],
+            "topics": [
+                {
+                    "id": "7F81A0CB-B91F-4896-B9A5-41BE9A54A27B",
+                    "name": "Archeology"
+                },
+                {
+                    "id": "B912363F-771C-4098-BA3A-938DF38A9D7E",
+                    "name": "Aviation"
+                },
+                {
+                    "id": "7F12224B-217A-4B07-A4A2-636B1CE7F221",
+                    "name": "Colonization and Settlement"
+                },
+                {
+                    "id": "988B4AFC-F478-4673-B66D-E6BDB0CCFF35",
+                    "name": "Forts"
+                },
+                {
+                    "id": "351EE154-87AA-46B0-BBA1-ED604368ACE9",
+                    "name": "Incarceration"
+                },
+                {
+                    "id": "4C9D4777-A9DA-47D1-A0B9-F4A3C98BC1B3",
+                    "name": "Maritime"
+                },
+                {
+                    "id": "123CE28E-0EFA-4330-8E6E-EEFF3D7BF772",
+                    "name": "Coastal Defenses"
+                },
+                {
+                    "id": "7424754D-EB8B-4608-A69A-50D44992931B",
+                    "name": "Maritime - Military"
+                },
+                {
+                    "id": "A079385C-3E71-4E18-9E42-B046BC22EA95",
+                    "name": "Ships and Shipwrecks"
+                },
+                {
+                    "id": "3B0D607D-9933-425A-BFA0-21529AC4734C",
+                    "name": "Military"
+                },
+                {
+                    "id": "97CCB419-196C-4B95-BB3A-621458F78415",
+                    "name": "US Army"
+                },
+                {
+                    "id": "7A9F5EB5-4AE3-4A16-AFF0-E1F9FF2F8B32",
+                    "name": "US Navy"
+                },
+                {
+                    "id": "64808223-DD03-40ED-99A1-76183E7AB1F5",
+                    "name": "US Marines"
+                },
+                {
+                    "id": "D164D82F-4031-4BCB-90A8-B388502CA308",
+                    "name": "US Coast Guard"
+                },
+                {
+                    "id": "83CEA23E-9FF6-4C6B-B48E-A725087D5CC5",
+                    "name": "US Air Force (Army Air Corps)"
+                },
+                {
+                    "id": "6766B838-9493-4EF8-830E-2D1EFB917461",
+                    "name": "Indigenous and Native Warrior"
+                },
+                {
+                    "id": "6A3658B4-FB6E-4E23-A63A-9AEF11988831",
+                    "name": "Battlefields"
+                },
+                {
+                    "id": "BEB7E470-13B2-4E00-84B2-0402D98DAF69",
+                    "name": "Monuments and Memorials"
+                },
+                {
+                    "id": "A1BAF33E-EA84-4608-A888-4CEE9541F027",
+                    "name": "Native American Heritage"
+                },
+                {
+                    "id": "518B32FB-339D-4C52-B2C2-04BF406AA4B0",
+                    "name": "Religion and Spirituality"
+                },
+                {
+                    "id": "A160B3D9-1603-4D89-B82F-21FCAF9EEE3B",
+                    "name": "Tragic Events"
+                },
+                {
+                    "id": "8CDF78C9-F91A-4ACD-AE70-4FF186F616CE",
+                    "name": "Forced Marches"
+                },
+                {
+                    "id": "CB405E14-E2A3-4C2E-A91C-AFF8AEB3DEA0",
+                    "name": "Massacres"
+                },
+                {
+                    "id": "27BF8807-54EA-4A3D-B073-AA7AA361CD7E",
+                    "name": "Wars and Conflicts"
+                },
+                {
+                    "id": "74869FAE-8DFD-4454-847F-11FDDB679F94",
+                    "name": "World War II"
+                },
+                {
+                    "id": "77B7EFDF-1A74-409C-8BA2-324EC919DB0E",
+                    "name": "Arctic"
+                },
+                {
+                    "id": "C8F16A24-90B7-47D9-B2E0-5F2A9237D0F4",
+                    "name": "Tundra"
+                },
+                {
+                    "id": "46FC5CBD-9AD5-48F1-B4DA-1357031B1D2E",
+                    "name": "Coasts, Islands and Atolls"
+                },
+                {
+                    "id": "101F4D51-F99D-45A6-BBB6-CD481E5FACED",
+                    "name": "Mountains"
+                },
+                {
+                    "id": "9C9FCBB6-360B-4743-8155-6F9341CBE01B",
+                    "name": "Scenic Views"
+                }
+            ],
+            "states": "AK",
+            "contacts": {
+                "phoneNumbers": [
+                    {
+                        "phoneNumber": "9076443472",
+                        "description": "",
+                        "extension": "",
+                        "type": "Voice"
+                    }
+                ],
+                "emailAddresses": [
+                    {
+                        "description": "",
+                        "emailAddress": "rachel_mason@nps.gov"
+                    }
+                ]
+            },
+            "entranceFees": [],
+            "entrancePasses": [],
+            "fees": [],
+            "directionsInfo": "The park is located on Amaknak Island in the Aleutian Island chain. The island is located 800 miles west of Anchorage. The island can be reached by commercial or charter air flights from Anchorage. Commercial flights to Unalaska include Pen Air and Alaska Airlines. The Alaska Marine Highway is a ferry service that is operated by the state that can be used to reach the island. The Aleutian World War II Visitor Center is located at the Unalaska airport.",
+            "directionsUrl": "http://www.nps.gov/aleu/planyourvisit/directions.htm",
+            "operatingHours": [
+                {
+                    "exceptions": [
+                        {
+                            "exceptionHours": {
+                                "wednesday": "Closed",
+                                "monday": "Closed",
+                                "thursday": "Closed",
+                                "tuesday": "Closed",
+                                "friday": "Closed",
+                                "saturday": "Closed"
+                            },
+                            "startDate": "2024-07-04",
+                            "name": "Fourth of July",
+                            "endDate": "2024-07-04"
+                        },
+                        {
+                            "exceptionHours": {
+                                "wednesday": "Closed",
+                                "monday": "Closed",
+                                "thursday": "Closed",
+                                "tuesday": "Closed",
+                                "friday": "Closed",
+                                "saturday": "Closed"
+                            },
+                            "startDate": "2023-09-02",
+                            "name": "Winter",
+                            "endDate": "2024-05-27"
+                        }
+                    ],
+                    "description": "",
+                    "standardHours": {
+                        "wednesday": "8:00AM - 5:00PM",
+                        "monday": "8:00AM - 5:00PM",
+                        "thursday": "8:00AM - 5:00PM",
+                        "sunday": "8:00AM - 5:00PM",
+                        "tuesday": "8:00AM - 5:00PM",
+                        "friday": "8:00AM - 5:00PM",
+                        "saturday": "8:00AM - 5:00PM"
+                    },
+                    "name": "Summer Hours"
+                }
+            ],
+            "addresses": [
+                {
+                    "postalCode": "99501",
+                    "city": "Anchorage",
+                    "stateCode": "AK",
+                    "countryCode": "US",
+                    "provinceTerritoryCode": "",
+                    "line1": "Affiliated Areas, Alaska Regional Office",
+                    "type": "Physical",
+                    "line3": "240 W 5th Avenue",
+                    "line2": "National Park Service"
+                },
+                {
+                    "postalCode": "99501",
+                    "city": "Anchorage",
+                    "stateCode": "AK",
+                    "countryCode": "US",
+                    "provinceTerritoryCode": "",
+                    "line1": "Affiliated Areas, Alaska Regional Office",
+                    "type": "Mailing",
+                    "line3": "240 W 5th Avenue",
+                    "line2": "National Park Service"
+                }
+            ],
+            "images": [
+                {
+                    "credit": "NPS Photo",
+                    "title": "A homeland changed",
+                    "altText": "Group of people around a Russian cross in tall grass",
+                    "caption": "In September 2009, Nick Lekanoff, Sr., former Makushin resident, traveled with his daughter and other descendants of Makushin on the Tiglax to visit the village site, which had been left behind in the evacuation of 1942 and never permanently resettled.",
+                    "url": "https://www.nps.gov/common/uploads/structured_data/3C7BC1AE-1DD8-B71B-0BF60FDE7A21822B.jpg"
+                },
+                {
+                    "credit": "Photograph courtesy National Archives",
+                    "title": "William C. House and the Aerological Detail on Kiska",
+                    "altText": "Twelve men and a dog pose for a photo",
+                    "caption": "After his aerological crew was captured by the Japanese in June, 1942, Senior Petty Officer William House survived 50 days in the hills of Kiska.  He ate grass, shellfish, and worms. Weighing 80lbs he surrendered and was respected for his perseverance.",
+                    "url": "https://www.nps.gov/common/uploads/structured_data/3C7BC37B-1DD8-B71B-0BA4AF7F3700FE86.jpg"
+                },
+                {
+                    "credit": "Photograph courtesy National Archives",
+                    "title": "Evacuation and internment",
+                    "altText": "People crowd at the railing of a ship",
+                    "caption": "Pribilof villagers, here lining the railing of the USAT Delarof on the day of their departure (June 15, 1942), were evacuated with only a few hours notice and no idea of their ultimate destination.",
+                    "url": "https://www.nps.gov/common/uploads/structured_data/3C7BC517-1DD8-B71B-0BD7C869F63B3276.jpg"
+                },
+                {
+                    "credit": "Photo courtesy of National Archives",
+                    "title": "Challenging weather conditions",
+                    "altText": "Four men gather around a invalid man",
+                    "caption": "Soldiers rub the frostbitten feet of a disabled soldier. Over 2000 weather-related casualties—the majority Attu feet—were recorded for U.S. troops. This number represents the largest classification of casualties suffered by American forces on the island.",
+                    "url": "https://www.nps.gov/common/uploads/structured_data/3C7BC68B-1DD8-B71B-0BED69DAACF6A5AC.jpg"
+                },
+                {
+                    "credit": "Photo courtesy National Archives",
+                    "title": "The battle for Attu Island",
+                    "altText": "Six men with guns carry a person on a stretcher in a valley.",
+                    "caption": "U.S. wounded are gathered from the battlefield on Attu Island.  The battle on Attu, lasting nearly 20 days, was the second most deadly in the Pacific Theater.",
+                    "url": "https://www.nps.gov/common/uploads/structured_data/3C7BC7CF-1DD8-B71B-0B73637962E06C74.jpg"
+                },
+                {
+                    "credit": "Photo courtesy National Archives",
+                    "title": "Cultural collision",
+                    "altText": "A uniformed man holds up a broken Russian cross",
+                    "caption": "The Aleutian campaign brought together Russian, Native Alaskan, Japanese, and Euroamerican cultures. During the war 7 historic churches were damaged or destroyed. Villages were unrecognizable or burned to the ground and personal belonging lost or stolen.",
+                    "url": "https://www.nps.gov/common/uploads/structured_data/3C7BC97B-1DD8-B71B-0B9A70C0C0988F0E.jpg"
+                }
+            ],
+            "weatherInfo": "The Aleutian Islands are known for unpredictable and stormy weather. Rain, fog, and wind are common. Dress warmly and carry rain gear even in summer. Summer temperatures range from 45 to 65 degrees F. Early summer and fall often have clear sunny days with spectacular views of the surrounding volcanoes. See forecast: https://forecast.weather.gov/MapClick.php?lon=-166.52406692504883&lat=53.91748321582622#.X0aTYsi6OUk",
+            "name": "Aleutian Islands World War II",
+            "designation": "National Historic Area"
+        }
+    ]
+}
