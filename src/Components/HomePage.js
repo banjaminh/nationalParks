@@ -1,8 +1,7 @@
 import {getParks} from '../apiCalls'
-import {useEffect, useState} from 'react'
+import {useEffect} from 'react'
 import './HomePage.css'
 import Form from './Form/Form'
-import ToVisit from '../Components/ToVisit.js/ToVisit'
 import { useParksContext } from '../Context/ParksContext'
 import React from 'react'
 
@@ -23,13 +22,6 @@ function HomePage(){
         }
     gatherParkData();
     },[setParksData])
-    
-
-    console.log("PARKS DATA HOMEPAGE", parksData)
-
-
-   
-
 
     return (
         <div className='overlay'>
@@ -37,5 +29,10 @@ function HomePage(){
         </div>
     )
 }
+
+
+   
+
+
 
 export default HomePage

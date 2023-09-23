@@ -1,8 +1,8 @@
-import { MapContainer, TileLayer, Marker, Popup, Pane, useMap, Map } from 'react-leaflet';
+import { Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import './StateParksMap.css'
 import { useParksContext } from '../../Context/ParksContext';
-import {useEffect,useState} from 'react'
+import {useEffect} from 'react'
 import {Icon} from 'leaflet'
 import {useParams, Link} from 'react-router-dom'
 import { getParks } from '../../apiCalls';

@@ -1,12 +1,7 @@
-import {useEffect,useState} from 'react';
-import {useNavigate,useParams, Link} from 'react-router-dom'
-import { useParksContext } from '../../Context/ParksContext';
-import { MapContainer, TileLayer, Marker, Popup, Pane, useMap, Map } from 'react-leaflet';
-import L from 'leaflet';
+import { Link} from 'react-router-dom'
+import { MapContainer, TileLayer} from 'react-leaflet';
 import './StatePage.css'
 import StateParksMap from '../StateParksMap/StateParksMap'
-
-
 
 function StatePage(){
     return (
@@ -30,4 +25,9 @@ function StatePage(){
 
 
 export default StatePage
+
+
+
+
+
                

@@ -12,7 +12,7 @@
 }
 
 .arrow-button {
-    background-color: bisque; 
+  background-color: rgba(0, 0, 0,.01);
     border: none; 
    cursor: pointer;
   }
@@ -20,6 +20,14 @@
 
 
 .arrow-icon {
+  background-color: none;
     font-size: 4em; 
-    background-color: bisque;
+    color: white;
+  }
+
+  @media screen and (max-width: 940px) {
+    .image-container img{
+      height: 10em;
+      width: 15em;
+    }
   }
