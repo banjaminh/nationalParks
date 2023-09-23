@@ -4,8 +4,7 @@
 }
 
 .leaflet-popup-content-wrapper {
-    background-color: rgb(70, 162, 33);
-
+    background-color: rgb(31, 73, 14);
 }
 
 .park-popup{
@@ -13,4 +12,10 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+
+.leaflet-popup-content p{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
 }
