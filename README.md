@@ -7,7 +7,7 @@ Checkout the app here! https://national-parks-eta.vercel.app/
 
 ## 📷 Preview
 
-https://github.com/banjaminh/nationalParks/assets/128344939/85eee843-7a99-47c3-9eff-80278ccfce7b
+![ezgif com-video-to-gif (1)](https://github.com/banjaminh/nationalParks/assets/128344939/2f11007d-056d-4df0-b281-e80fbfdc8744)
 
 
 
@@ -33,6 +33,7 @@ This was the final project for mod 3 at Turing School of Software & Design. The 
 
 ## 🏆 Wins and Challenges 
  - I was able to implement Lealfet for our map component to dynamically respond to user interaction.
+
 
 
 
