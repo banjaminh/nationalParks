@@ -26,11 +26,11 @@ function ImageView({imageArray}){
 
     return imageArray.length != 0 ? (
         <div className='image-container'>
-            <button className='arrow-button' onClick={() =>changeImage('down')}>
+            <button aria-label='previous-picture' className='arrow-button' onClick={() =>changeImage('down')}>
                 <FontAwesomeIcon icon={faChevronLeft} className='arrow-icon'/>
             </button>
             <img src={imageArray[index].url} alt={`Image number ${index}`}></img>
-            <button className='arrow-button' onClick={() => changeImage('up')}>
+            <button aria-label='next-picture 'className='arrow-button' onClick={() => changeImage('up')}>
             <FontAwesomeIcon icon={faChevronRight} className='arrow-icon'/>
             </button>
         </div>) : null

@@ -84,16 +84,16 @@ function ParkPage(){
     }
 
     const activities =  park && park.activities && park.activities.length > 0 ? (
+        <ul>
+            {park.activities.map((activity) => (
+                <li key={activity.id}>{activity.name}</li>
+            ))}
+        </ul>
+       ) : (<p>No activites</p>)
+       
     
             
-            <ul>
-                {park.activities.map((activity) => (
-                    <li key={activity.id}>{activity.name}</li>
-                ))}
-            </ul>
-           
 
-    ) : (<p>No activites</p>)
   
     
     console.log("PARK BEFORE RETURN ", park)
@@ -116,12 +116,10 @@ function ParkPage(){
                     </div>
                     <div className='contact-wrapper'>
                         <div className='contact-box'>
-                            
                             <div className='contact-info'>
                                 <div className='address'>
                                     <p>{park.addresses[0].line1}</p>
                                     <p>{park.addresses[0].city},{park.addresses[0].stateCode} {park.addresses[0].postalCode}</p>
-        
                                 </div>
                                 <div className='email-phone'>
                                     <p><FontAwesomeIcon className='info-icon' icon={faEnvelope} />{park.contacts.emailAddresses[0].emailAddress}</p>
@@ -131,40 +129,42 @@ function ParkPage(){
                         </div>
                     </div>
                     <div className='images-activities'>
-                        
                         <ImageView imageArray={park.images}/>
-                        
                     </div>
                     <div className='about-weather'>
-                        
-                        
                         <div className='description'>
                             <h3>About:</h3>
                             <p>{park.description}</p>
                         </div>
                         <div className='weather'>
                             <div className='weather-img'>
-                                <img src={weatherPic}/>
+                                <img src={weatherPic} alt='weather-icon'/>
                             </div>
                             <div className='weather-info'>
                                 <h3>Weather advisory:</h3>
                                 <p>{park.weatherInfo}</p>
                             </div>
-                                
-
                         </div>
                         </div>
                     </div>
                     </div>
-                    
                 </div>
                 ) : <div>no park data</div> )
-    
-}
-
-
-export default ParkPage
+            }
+            
+            
+            export default ParkPage
+        
+                        
+                        
+                        
+                        
                     
+                                
+
+                                
+    
 
             
                 
+                            
