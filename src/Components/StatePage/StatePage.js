@@ -9,7 +9,6 @@ import StateParksMap from '../StateParksMap/StateParksMap'
 
 
 function StatePage(){
-    console.log("STATEPAGE")
     return (
         <div className='map' id='map'>
             <MapContainer
@@ -22,7 +21,6 @@ function StatePage(){
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
                 <StateParksMap/>
-               
             </MapContainer>
             <Link to='/'><button className='back-to-search'>Back to State Search</button></Link>
         </div>
@@ -32,3 +30,4 @@ function StatePage(){
 
 
 export default StatePage
+               

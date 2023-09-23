@@ -1,6 +1,7 @@
 import './ImageView.css'
 
 import {useState} from 'react'
+import PropTypes from 'prop-types'
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,7 +10,6 @@ import { faChevronRight,faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
 
 function ImageView({imageArray}){
-    const images = imageArray;
     const [index, setIndex] = useState(0);
 
     function changeImage (direction) {
@@ -36,5 +36,13 @@ function ImageView({imageArray}){
         </div>) : null
     
     }
+    
+    ImageView.propTypes = {
+        imageArray: PropTypes.arrayOf(
+          PropTypes.shape({
+            url: PropTypes.string.isRequired,
+          })
+        ).isRequired,
+      };
 
     export default ImageView;

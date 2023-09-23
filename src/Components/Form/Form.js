@@ -1,12 +1,10 @@
-import { useParksContext } from '../../Context/ParksContext';
+
 import './Form.css'
 import {useState} from 'react'
-import {getParks} from '../../apiCalls'
 import { useNavigate } from 'react-router-dom';
 
 function Form(){
     const [state, setState] = useState('');
-    const {parksData , setParksData} = useParksContext();
     const navigate = useNavigate();
 
     const stateAbbreviations = [

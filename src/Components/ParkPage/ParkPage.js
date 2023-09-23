@@ -3,7 +3,7 @@ import { Link , useParams} from 'react-router-dom'
 import { useParksContext } from '../../Context/ParksContext';
 import {useState, useEffect} from 'react'
 import ImageView from '../ImageView/ImageView';
-import { FavoritesContext, useFavoritesContext } from '../../Context/FavoritesContext';
+import {useFavoritesContext } from '../../Context/FavoritesContext';
 import { getPark } from '../../apiCalls';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar,faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';

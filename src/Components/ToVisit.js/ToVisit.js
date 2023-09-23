@@ -10,12 +10,10 @@ function ToVisit () {
     const [wishList, setWishList] = useState([]);
 
     useEffect(() => {
-        console.log("TO VISIT!!!!")
         setWishList(favorites);
-        
     },[favorites])
 
-    console.log("WISH LIST ", wishList)
+    
     const cards = wishList && wishList.map(wish => {
         let stateID = wish.states.slice(0,2)
     return (<ParkCard
@@ -25,7 +23,7 @@ function ToVisit () {
         parkCode = {wish.parkCode}
         name= {wish.fullName}/>);})
 
-    console.log("CARDS", cards)
+   
     return cards && (
         <div className='to-visit-container'>
             <h2>Wish List:</h2>
