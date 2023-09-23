@@ -1,5 +1,6 @@
 .map{
-    height:85vh;
+    height: 48em;
+    position:relative;
     
 }
 
@@ -7,3 +8,10 @@
     width: auto;
     height: 100%;
   }
+
+  .back-to-search {
+    position: absolute;
+    top: 1em; 
+    right: 1em; 
+    z-index: 1000;
+}

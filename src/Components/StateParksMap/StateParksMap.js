@@ -46,7 +46,7 @@ function StateParksMap() {
     const mapPoints = stateParkData && stateParkData.map(park => {
         return <Marker key={park.id} id={park.id} position={[park.latitude, park.longitude]} icon={parkIcon} >
             <Popup>
-              <Link to={`/states/${stateIDParams}/park/${park.id}`}>
+              <Link to={`/states/${stateIDParams}/park/${park.parkCode}`}>
                 <div className='park-popup'>
                     <p>{park.fullName}</p>
                     {park.images[0] && <img src={park.images[0].url} alt={park.images[0].altText}/>}

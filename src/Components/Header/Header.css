@@ -1,7 +1,10 @@
 .header-container{
-    background-color: rgb(29, 129, 46);
-    height: 15vh;
+    height: 13em;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-image: url('./panoramicPark.jpg'); */
+    background-color: rgb(8, 87, 8);
+    background-size: 100% 100%;
 }
+

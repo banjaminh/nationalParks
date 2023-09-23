@@ -9,7 +9,8 @@ import { FavoritesContextProvider } from './Context/FavoritesContext';
 import ToVisit from './Components/ToVisit.js/ToVisit'
 import ParkPage from './Components/ParkPage/ParkPage'
 import StatePageLayout from './Components/Layout/StatePageLayout';
-import ParkPageLayout from './Components/Layout/ParkPageLayout';
+
+import '@fortawesome/fontawesome-svg-core/styles.css';
 
 function App() {
   

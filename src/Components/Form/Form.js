@@ -21,16 +21,7 @@ function Form(){
             );
           });
           
-    async function gatherParkData(stateID){
-        
-            // const parkData = await getParks(stateID);
-            // console.log("PARK DATA",parkData)
-            // const filteredParks = parkData.data.filter(park => {
-            //     let validPark = park.latitude && park.longitude ? true: false;
-            //     return validPark;
-            // })
-            // console.log(filteredParks)
-            // setParksData(filteredParks)
+   function gatherParkData(stateID){
             navigate(`/states/${stateID}`)
         }
     
