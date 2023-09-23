@@ -1,6 +1,6 @@
 import './ImageView.css'
 
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import PropTypes from 'prop-types'
 
 
@@ -22,9 +22,13 @@ function ImageView({imageArray}){
         }
         setIndex(nextIndex);
     }
+    useEffect(() => {
+        setIndex(0)
+    },[imageArray])
+    console.log("INDEX VALUE",index)
     
 
-    return imageArray.length != 0 ? (
+    return imageArray.length != 0 && imageArray[index] ? (
         <div className='image-container'>
             <button aria-label='previous-picture' className='arrow-button' onClick={() =>changeImage('down')}>
                 <FontAwesomeIcon icon={faChevronLeft} className='arrow-icon'/>
